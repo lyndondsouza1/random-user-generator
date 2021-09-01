@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700");
+/* font-family: "Open Sans", sans-serif; */
+* {
+	box-sizing: border-box;
+}
+ @keyframes slideInLeft {
+        0% {
+          transform: translateX(-100%);
+        }
+        100% {
+          transform: translateX(0);
+        }
+      }
+	  @keyframes fadeIn{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+body {
+	font-family: "Lato", sans-serif;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	background-color: burlywood;
+	/* background: rgb(238, 174, 202);
+	background: radial-gradient(
+		circle,
+		rgba(238, 174, 202, 1) 0%,
+		rgba(148, 187, 233, 1) 100%
+	); */
+}
+h1 {
+	 animation-duration: 2s;
+        animation-timing-function: ease-in-out;
+        animation-delay: 0s;
+        animation-name: slideInLeft;
+}
+main {
+	display: flex;
+	transition: all 2s ease;
+}
+.container {
+	display: flex;
+	flex-direction: column;
+
+	justify-content: center;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	
+}
+
+.img-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+img {
+	width: 200px;
+	border: 2px solid grey;
+	border-radius: 50%;
+	 opacity: 1;
+  animation: fadeIn 5s ease;
+}
+
+.refresh {
+	transition: all 0.5s ease;
+	color: #fff;
+	border: 3px solid white;
+	font-family: "Montserrat", sans-serif;
+	text-transform: uppercase;
+	text-align: center;
+	line-height: 1;
+	font-size: 17px;
+	background-color: transparent;
+	padding: 10px;
+	outline: none;
+	border-radius: 4px;
+}
+.refresh:after {
+	opacity: 0;
+	background-size: 10px 10px;
+
+	transform: translateX(-50%) translateY(-50%) rotate(90deg);
+}
+.refresh:hover {
+	color: #001f3f;
+	background-color: #fff;
+}
+
+.tabcontent {
+	 opacity: 1;
+  animation: fadeIn 5s ease;
+	display: block;
+	text-align: center;
+	width: 400px;
+	
+	padding: 2rem;
+}
+.tab {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+}
+.tab button {
+	display: block;
+	background-color: inherit;
+	color: white;
+	padding: 16px;
+	width: 100%;
+	border: none;
+	outline: none;
+	text-align: left;
+	cursor: pointer;
+	font-size: 17px;
+	margin: 10px;
+	opacity: 0.7;
+
+	transition: all 0.3s ease-in-out;
+}
+.tab button:hover {
+	color: aqua;
+}
+.tab button.active {
+	color: black;
+	opacity: 1;
+}
+.clearfix::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+@media only screen and (max-width: 600px) {
+	h1 {
+		font-size: 32px;
+	}
+	body {
+		align-items: center;
+		justify-content: space-between;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+	}
+	main {
+		display: flex;
+		flex-direction: column;
+	}
+	.tab {
+		display: flex;
+		flex-direction: row;
+		margin: 30px;
+	}
+	.tablinks {
+		padding: 1rem 1rem;
+		margin: 2rem 2rem;
+	}
+	.tab button {
+		display: block;
+		background-color: inherit;
+		color: white;
+		width: 100%;
+		border: none;
+		outline: none;
+		text-align: left;
+		cursor: pointer;
+		opacity: 0.7;
+
+		transition: all 0.3s ease-in-out;
+	}
+	.container {
+		display: flex;
+		flex-direction: column;
+
+		justify-content: center;
+		align-items: center;
+		justify-content: space-between;
+		text-align: center;
+	}
+	.img-container {
+		display: flex;
+		align-items: center;
+
+		justify-content: center;
+	}
+	img {
+		width: 200px;
+		border: 2px solid grey;
+		border-radius: 50%;
+	}
+}

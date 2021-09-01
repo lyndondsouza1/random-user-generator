@@ -17,11 +17,10 @@ getData(url);
 function random(results) {
 	const randomuser = document.createElement("div");
 	randomuser.classList.add("randomuser");
-
 	randomuser.innerHTML = `
     
     <div class="img-container">
-    <img src="${results.picture.large}">
+    <img src="${results.picture.large}"/>
 </div>
    <div id="phone" class="tabcontent">
 My Phone number is
@@ -33,8 +32,8 @@ My Name is 	<br />
  <p> ${results.name.first} ${results.name.last}</p>
     </div>
    <div id="dob" class="tabcontent">
-My DOB  is 	<br />
-    <p> ${results.dob.date}</p>
+My Age  is 	<br />
+    <p> ${results.dob.age} yrs</p>
     </div>
    <div id="address" class="tabcontent">
 My Address is	<br />
@@ -44,13 +43,16 @@ My Address is	<br />
 My Email Address is 	<br />
   <p> ${results.email}</p>
     </div>
+	<button class="refresh" type="button" onClick="window.location.reload();"><i class="bi bi-arrow-clockwise"></i>regen</button>
+
   
 
     `;
 
-	// const btn = randomuser.querySelector(".user-body");
+	// const btn = document.querySelector(".refresh");
 
 	// btn.addEventListener("click", () => {
+	// 	randomuser.innerHTML = " ";
 	// 	getData(url);
 	// });
 	container.appendChild(randomuser);
